@@ -1,0 +1,7 @@
+#-------------------------------------------------------------
+# custom commands
+#-------------------------------------------------------------
+
+source ~/bin/dotfiles/bash/env
+source ~/bin/dotfiles/bash/alias
+source ~/bin/dotfiles/bash/prompt
