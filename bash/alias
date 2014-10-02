@@ -3,25 +3,27 @@
 
 alias l='ls -lah' 
 
-alias al='mvim ~/bin/dotfiles/bash/alias'
+alias al='gvim ~/bin/mc-dotfiles/bash/alias'
 
-alias vhost='sudo vim  /private/etc/hosts'
+alias gvim="gvim 2>/dev/null"
 
-alias csvim='open ~/bin/dotfiles/vim-cheet.png'
+#alias vhost='sudo vim  /private/etc/hosts'
 
-alias csmd='open ~/bin/dotfiles/md-cheetsheet.md'
+alias csvim='open ~/bin/mc-dotfiles/vim-cheet.png'
 
-alias cskvim='open ~/bin/dotfiles/vim-keyboard.jpg'
-alias add-ssh='ssh-add ~/.ssh/matt3c'
+alias csmd='open ~/bin/mc-dotfiles/md-cheetsheet.md'
 
-alias flush='dscacheutil -flushcache' 
+#alias cskvim='open ~/bin/mc-dotfiles/vim-keyboard.jpg'
+#alias add-ssh='ssh-add ~/.ssh/matt3c'
+
+#alias flush='dscacheutil -flushcache' 
 # custom functions  
 #-----------------------------------------------------
 
-function ht() { cd /Applications/MAMP/htdocs/"$1" && ls ; }
+#function ht() { cd /Applications/MAMP/htdocs/"$1" && ls ; }
 
 function dt() { cd ~/Desktop/"$1" && ls ; }  
 
-function to() { touch "$1" && open "$1" ; }  
+function to() { touch "$1" && gvim "$1" ; }  
 
 function tod() { mkdir "$1" && cd "$1" ; }  
