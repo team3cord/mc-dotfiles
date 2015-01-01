@@ -5,29 +5,29 @@ alias l='ls -lah'
 
 alias al='mvim ~/bin/dotfiles/bash/alias'
 
-#alias vhost='sudo vim  /private/etc/hosts'
+alias vhost='sudo vim  /private/etc/hosts'
 
 alias csvim='open ~/bin/dotfiles/vim-cheet.png'
 
 alias csmd='open ~/bin/dotfiles/md-cheetsheet.md'
 
 alias cskvim='open ~/bin/dotfiles/vim-keyboard.jpg'
-#alias add-ssh='ssh-add ~/.ssh/matt3c'
+alias add-ssh='ssh-add ~/.ssh/matt3c'
 
-#alias flush='dscacheutil -flushcache' 
+alias flush='dscacheutil -flushcache' 
 
 # SquareSpace git  
 #-----------------------------------------------------
-#alias gsa='git add .'
+alias gsa='git add .'
 
-#function gsc() { git commit -m '"$1"' ; }
+function gsc() { git commit -m '"$1"' ; }
 
-#alias gsp='git push squarespace master'
+alias gsp='git push squarespace master'
 
 # custom functions  
 #-----------------------------------------------------
 
-#function ht() { cd /Applications/MAMP/htdocs/"$1" && ls ; }
+function ht() { cd /Applications/MAMP/htdocs/"$1" && ls ; }
 
 function dt() { cd ~/Desktop/"$1" && ls ; }  
 
