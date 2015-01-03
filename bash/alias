@@ -7,11 +7,11 @@ alias al='mvim ~/bin/dotfiles/bash/alias'
 
 alias vhost='sudo vim  /private/etc/hosts'
 
-alias csvim='open ~/bin/dotfiles/vim-cheet.png'
+#alias csvim='open ~/bin/dotfiles/vim-cheet.png'
 
-alias csmd='open ~/bin/dotfiles/md-cheetsheet.md'
+alias csmd='open ~/bin/dotfiles/md-cheatsheet.pdf'
 
-alias cskvim='open ~/bin/dotfiles/vim-keyboard.jpg'
+alias cskvim='open ~/bin/dotfiles/.vim/vim-keyboard.jpg'
 alias add-ssh='ssh-add ~/.ssh/matt3c'
 
 alias flush='dscacheutil -flushcache' 
