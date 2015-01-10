@@ -31,6 +31,12 @@ alias csvim='open ~/bin/dotfiles/.vim/vim-keyboard.jpg'
 
 function dt() { cd ~/Desktop/"$1" && ls ; }  
 
+function pcs() { cd ~/Desktop/PCS/"$1" && ls ; }  
+
 function to() { touch "$1" && mvim "$1" ; }  
 
 function tod() { mkdir "$1" && cd "$1" ; }  
+
+
+function dot() { cd ~/bin/dotfiles/"$1" && l ; }  
+
