@@ -1,7 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-set guifont=Monaco:h18
+set guifont=Monaco:h26
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/bin/dotfiles/.vim/bundle/Vundle.vim
@@ -90,4 +90,9 @@ endfunction
 :set t_Co=256  
 :set background=dark  
 :colorscheme grb256   
+let NERDTreeShowHidden=1
+" Custom macros  
+"let @fn='ifunction(){}<Esc>hhhi'
+"let @cl='console.log();^[hi^[\'
 
+" let @cl = 'iconsole.log();'
