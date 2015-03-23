@@ -9,17 +9,21 @@ alias vhost='sudo vim  /private/etc/hosts'
 
 #alias csvim='open ~/bin/dotfiles/vim-cheet.png'
 
-alias csmd='open ~/bin/dotfiles/cs-md.pdf'
+alias csmd='open ~/bin/dotfiles/cheat/cs-md.pdf'
 
-alias csreg='open ~/bin/dotfiles/cs-regex.jpg'
+alias csreg='open ~/bin/dotfiles/cheat/cs-regex.jpg'
 
-alias csvim='open ~/bin/dotfiles/.vim/cs-vim.jpg'
+alias csvim='open ~/bin/dotfiles/cheat/cs-vim.jpg'
 
-alias csnerd='open ~/bin/dotfiles/.vim/cs-nerd.pdf'
+alias csnerd='open ~/bin/dotfiles/cheat/cs-nerd.pdf'
+
+alias csng='open ~/bin/dotfiles/cheat/cs-ng.pdf'
 
 alias add-ssh='ssh-add ~/.ssh/matt3c'
 
 alias flush='dscacheutil -flushcache' 
+
+alias aliens='cat ~/bin/dotfiles/bash/alias'
 
 # SquareSpace git  
 #-----------------------------------------------------
@@ -45,3 +49,8 @@ function tod() { mkdir "$1" && cd "$1" ; }
 
 function dot() { cd ~/bin/dotfiles/"$1" && l ; }  
 
+function qtr() { cd ~/Desktop/PCS-projects/Quitter && ls; }
+
+function fpx() { cd ~/Desktop/PCS-projects/FullPixel && ls ; }
+
+function wsq() { ws ~/Desktop/PCS-projects/Quitter ; }
