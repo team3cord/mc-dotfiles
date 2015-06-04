@@ -2,6 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 set guifont=Monaco:h26
+set spell spell spelllang=en_us 
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/bin/dotfiles/.vim/bundle/Vundle.vim
