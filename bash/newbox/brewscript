@@ -1,4 +1,7 @@
 # http://lapwinglabs.com/blog/hacker-guide-to-setting-up-your-mac  
+# https://github.com/cowboy/dotfiles  
+# https://github.com/mathiasbynens/dotfiles
+# https://github.com/paulirish/dotfiles
 
 # Check for Homebrew,
 # Install if we don't have it
@@ -34,22 +37,22 @@ $PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 binaries=(
   graphicsmagick
-    webkit2png
-      rename
-        zopfli
-          ffmpeg
-            python
-              sshfs
-                trash
-                  node
-                    tree
-                      ack
-                        hub
-                          git
-                          )
+  webkit2png
+  rename
+  zopfli
+  ffmpeg
+  python
+  sshfs
+  trash
+  node
+  tree
+  ack
+  hub
+  git
+  )
 
-                          echo "installing binaries..."
-                          brew install ${binaries[@]}
+  echo "Installing binaries..."
+  brew install ${binaries[@]}
 
 
 
@@ -60,44 +63,44 @@ brew install caskroom/cask/brew-cask
 # Apps
 apps=(
   alfred
-    dropbox
-      google-chrome
-        qlcolorcode
-          screenflick
-            slack
-              transmit
-                appcleaner
-                  firefox
-                    hazel
-                      qlmarkdown
-                        seil
-                          spotify
-                            vagrant
-                              arq
-                                flash
-                                  iterm2
-                                    qlprettypatch
-                                      shiori
-                                        sublime-text3
-                                          virtualbox
-                                            atom
-                                              flux
-                                                mailbox
-                                                  qlstephen
-                                                    sketch
-                                                      tower
-                                                        vlc
-                                                          cloudup
-                                                            nvalt
-                                                              quicklook-json
-                                                                skype
-                                                                  transmission
-                                                                  )
+  dropbox
+  google-chrome
+  qlcolorcode
+  screenflick
+  slack
+  transmit
+  appcleaner
+  firefox
+  hazel
+  qlmarkdown
+  seil
+  spotify
+  vagrant
+  arq
+  flash
+  iterm2
+  qlprettypatch
+  shiori
+  sublime-text3
+  virtualbox
+  atom
+  flux
+  mailbox
+  qlstephen
+  sketch
+  tower
+  vlc
+  cloudup
+  nvalt
+  quicklook-json
+  skype
+  transmission
+  )
 
-                                                                  # Install apps to /Applications
-                                                                  # Default is: /Users/$user/Applications
-                                                                  echo "installing apps..."
-                                                                  brew cask install --appdir="/Applications" ${apps[@]}
+  # Install apps to /Applications
+  # Default is: /Users/$user/Applications
+  echo "installing apps..."
+  brew cask install --appdir="/Applications" ${apps[@]}
 
 brew cask alfred link
 
