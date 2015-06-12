@@ -2,9 +2,9 @@
 # custom commands
 #-------------------------------------------------------------
 
-source ~/bin/dotfiles/bash/env
-source ~/bin/dotfiles/bash/alias
-source ~/bin/dotfiles/bash/prompt
+source ~/bin/mc-dotfiles/bash/env
+source ~/bin/mc-dotfiles/bash/alias
+source ~/bin/mc-dotfiles/bash/prompt
 
 #------------------------------------------------------------
 # custom prompt
