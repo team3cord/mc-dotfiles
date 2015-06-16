@@ -31,6 +31,9 @@ Plugin 'nerdtree'
 " plugin from GitHub repo  
 Plugin 'snipmate'
 
+" plugin vim-javascript from GitHub  
+Plugin 'pangloss/vim-javascript'  
+
 " Keep Plugin commands between vundle#begin/end.
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

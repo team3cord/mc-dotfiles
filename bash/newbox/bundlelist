@@ -1,0 +1,14 @@
+JavaScript-Indent/
+Vundle.vim/
+YouCompleteMe/
+delimitMate/
+grb256/
+javascript-libraries-syntax.vim/
+nerdtree/
+snipmate/
+snipmate.vim/
+syntastic/
+tern_for_vim/
+vim-fugitive/
+vim-javascript/
+vim-javascript-syntax/

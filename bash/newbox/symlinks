@@ -4,6 +4,6 @@
 # .gitignore_global  
 # .vimrc    
 # .bashprofile??  
-
+# .vim from dotfiles .vim (dir)  
 # /  
 
