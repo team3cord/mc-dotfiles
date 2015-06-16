@@ -3,29 +3,29 @@
 
 alias l='ls -lah' 
 
-alias al='mvim ~/bin/dotfiles/bash/alias'
+alias al='mvim ~/bin/mc-dotfiles/bash/alias'
 
 alias vhost='sudo vim  /private/etc/hosts'
 
-#alias csvim='open ~/bin/dotfiles/vim-cheet.png'
+#alias csvim='open ~/bin/mc-dotfiles/vim-cheet.png'
 
-alias csmd='open ~/bin/dotfiles/cheat/cs-md.pdf'
+alias csmd='open ~/bin/mc-dotfiles/cheat/cs-md.pdf'
 
-alias csreg='open ~/bin/dotfiles/cheat/cs-regex.jpg'
+alias csreg='open ~/bin/mc-dotfiles/cheat/cs-regex.jpg'
 
-alias csvim='open ~/bin/dotfiles/cheat/cs-vim.jpg'
+alias csvim='open ~/bin/mc-dotfiles/cheat/cs-vim.jpg'
 
-alias csnerd='open ~/bin/dotfiles/cheat/cs-nerd.pdf'
+alias csnerd='open ~/bin/mc-dotfiles/cheat/cs-nerd.pdf'
 
-alias csng='open ~/bin/dotfiles/cheat/cs-ng.pdf'
+alias csng='open ~/bin/mc-dotfiles/cheat/cs-ng.pdf'
 
-alias csws='open ~/bin/dotfiles/cheat/cs-webstorm.png'
+alias csws='open ~/bin/mc-dotfiles/cheat/cs-webstorm.png'
 
 alias add-ssh='ssh-add ~/.ssh/matt3c'
 
 alias flush='dscacheutil -flushcache' 
 
-alias aliens='cat ~/bin/dotfiles/bash/alias'
+alias aliens='cat ~/bin/mc-dotfiles/bash/alias'
 
 # SquareSpace git  
 #-----------------------------------------------------
@@ -50,7 +50,7 @@ function tod() { mkdir "$1" && cd "$1" ; }
 
 function sd() { cd ~/Desktop/Job/SubtleDigital/"$1" && ls ; }  
 
-function dot() { cd ~/bin/dotfiles/"$1" && l ; }  
+function dot() { cd ~/bin/mc-dotfiles/"$1" && l ; }  
 
 function qtr() { cd ~/Desktop/PCS-projects/Quitter && ls; }
 
