@@ -5,27 +5,24 @@ set guifont=Monaco:h26
 set spell spell spelllang=en_us 
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/bin/mc-dotfiles/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 " github repo  
-Plugin 'Valloric/YouCompleteMe'   
-" The following are examples of different formats supported.
-Plugin 'tern_for_vim'  
-" plugin on GitHub repo
+
+
 Plugin 'tpope/vim-fugitive'
 " plugin https://github.com/jelera/vim-javascript-syntax
 Plugin 'jelera/vim-javascript-syntax'
 " plugin from GitHub repo  
-Plugin 'delimitMate'  
-" plugin from GitHub repo  
+
 Plugin 'syntastic'  
 " plugin colorscheme  
-Plugin 'grb256'
+Plugin 'quanganhdo/grb256' 
 " plugin from GitHub repo  
 Plugin 'nerdtree'
 " plugin from GitHub repo  
@@ -36,7 +33,7 @@ Plugin 'snipmate'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+" filetype plugin on
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -50,7 +47,7 @@ filetype plugin indent on    " required
 syntax on
 set nocompatible
 syntax enable
-"set foldmethod=syntax
+" set foldmethod=syntax
 set ignorecase
 set scrolloff=6  
 set autoindent
@@ -68,12 +65,11 @@ set noswapfile
 set visualbell
 set cursorline
 
-"autocmd vimenter * NERDTree 
-"autocmd vimenter * wincmd p
+" autocmd vimenter * NERDTree 
+" autocmd vimenter * wincmd p
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS  
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags  
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
-"autocmd FileType javascript call JavaScriptFold()
 
 " Close all open buffers on entering a window if the only
 " buffer that's left is the NERDTree buffer
@@ -93,7 +89,7 @@ endfunction
 :colorscheme grb256   
 let NERDTreeShowHidden=1
 " Custom macros  
-"let @fn='ifunction(){}<Esc>hhhi'
-"let @cl='console.log();^[hi^[\'
+" let @fn='ifunction(){}<Esc>hhhi'
+" let @cl='console.log();^[hi^[\'
 
 " let @cl = 'iconsole.log();'

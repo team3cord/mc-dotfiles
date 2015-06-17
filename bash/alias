@@ -57,3 +57,5 @@ function qtr() { cd ~/Desktop/PCS-projects/Quitter && ls; }
 function ofp() { cd ~/Desktop/PCS-projects/OurFamily && ls ; }
 
 function wsq() { ws ~/Desktop/PCS-projects/Quitter ; }
+
+function src() { cd ~/Documents/Source/"$1" && ls ; }  
