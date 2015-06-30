@@ -58,4 +58,8 @@ function ofp() { cd ~/Desktop/PCS-projects/OurFamily && ls ; }
 
 function wsq() { ws ~/Desktop/PCS-projects/Quitter ; }
 
-function src() { cd ~/Documents/Source/"$1" && ls ; }  
+function src() { cd ~/Documents/HOAH/Source/"$1" && ls ; }  
+
+function fed() { cd ~/Documents/HOAH/Source/FrontEndDev/FED/"$1" && ls ; }  
+
+function hoah() { cd ~/Documents/HOAH/"$1" && ls ; }  
