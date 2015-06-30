@@ -1,7 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-set guifont=Monaco:h26
+set guifont=Monaco:h19
 set spell spell spelllang=en_us 
 
 " set the runtime path to include Vundle and initialize
