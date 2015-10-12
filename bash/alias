@@ -44,6 +44,8 @@ function ht() { cd /Applications/MAMP/htdocs/"$1" && ls ; }
 
 function dt() { cd ~/Desktop/"$1" && ls ; }  
 
+function drp() { cd ~/Dropbox/"$1" && ls ; }  
+
 function pcs() { cd ~/Desktop/PCS/"$1" && ls ; }  
 
 function to() { touch "$1" && mvim "$1" ; }  
@@ -65,3 +67,5 @@ function src() { cd ~/Documents/HOAH/Source/"$1" && ls ; }
 function fed() { cd ~/Documents/HOAH/Source/FrontEndDev/FED/"$1" && ls ; }  
 
 function hoah() { cd ~/Documents/HOAH/"$1" && ls ; }  
+
+function par() { mvim ~/Desktop/ParkingLot.md ; }
