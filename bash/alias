@@ -1,7 +1,7 @@
 # custom commands  
 #-----------------------------------------------------
 
-alias l='ls -lah' 
+alias l='ls -lAh' 
 
 alias al='mvim ~/bin/mc-dotfiles/bash/alias'
 
