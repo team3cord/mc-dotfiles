@@ -7,7 +7,7 @@ alias al='mvim ~/bin/mc-dotfiles/bash/alias'
 
 alias vhost='sudo vim  /private/etc/hosts'
 
-#alias csvim='open ~/bin/mc-dotfiles/vim-cheet.png'
+alias csvim='open ~/bin/mc-dotfiles/vim-cheet.png'
 
 alias csmd='open ~/bin/mc-dotfiles/cheat/cs-md.pdf'
 
@@ -27,6 +27,8 @@ alias add-ssh='ssh-add ~/.ssh/matt3c'
 
 alias flush='dscacheutil -flushcache' 
 
+alias ppro='ping www.houseofantiquehardware.com'  
+
 alias aliens='cat ~/bin/mc-dotfiles/bash/alias'
 
 # SquareSpace git  
@@ -43,6 +45,8 @@ alias gsp='git push squarespace master'
 function ht() { cd /Applications/MAMP/htdocs/"$1" && ls ; }
 
 function dt() { cd ~/Desktop/"$1" && ls ; }  
+
+function wsp() { cd ~/Desktop/Workspace/"$1" && ls ; }  
 
 function drp() { cd ~/Dropbox/"$1" && ls ; }  
 
@@ -62,10 +66,24 @@ function ofp() { cd ~/Desktop/PCS-projects/OurFamily && ls ; }
 
 function wsq() { ws ~/Desktop/PCS-projects/Quitter ; }
 
-function src() { cd ~/Documents/HOAH/Source/"$1" && ls ; }  
+function src() { cd ~/Documents/Source/"$1" && ls ; }  
 
-function fed() { cd ~/Documents/HOAH/Source/FrontEndDev/FED/"$1" && ls ; }  
+function fed() { cd ~/Documents/Source/FrontEndDev/FED/"$1" && ls ; }  
+
+function wiki() { cd ~/Documents/Source/wiki/"$1" && ls ; }  
 
 function hoah() { cd ~/Documents/HOAH/"$1" && ls ; }  
 
-function par() { mvim ~/Desktop/ParkingLot.md ; }
+function nav() { http-server ~/Desktop/ ; }  
+
+function par() { mvim ~/Desktop/ParkingLot.md ; }  
+
+function ctag() { cp ~/Documents/Source/FrontEndDev/FED/html/tags/tag-template.html  ~/Documents/Source/FrontEndDev/FED/html/tags/"$1" ; }  
+
+function ctab() { cp ~/Documents/Source/FrontEndDev/FED/html/tabs/tab-template.html  ~/Documents/Source/FrontEndDev/FED/html/tabs/"$1" ; }  
+
+function ctemp() { cp ~/Documents/Source/FrontEndDev/FED/html/templates/temp-template.html  ~/Documents/Source/FrontEndDev/FED/html/templates/"$1" ; }  
+
+function ccat() { cp ~/Documents/Source/FrontEndDev/FED/html/category/cat-template.html  ~/Documents/Source/FrontEndDev/FED/html/category/"$1" ; }  
+
+function cinfo() { cp ~/Documents/Source/FrontEndDev/FED/html/info-item/info-template.html  ~/Documents/Source/FrontEndDev/FED/html/info-item/"$1" ; }  
