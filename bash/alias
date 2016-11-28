@@ -31,6 +31,8 @@ alias ppro='ping www.houseofantiquehardware.com'
 
 alias aliens='cat ~/bin/mc-dotfiles/bash/alias'
 
+alias brewup='brew update && brew upgrade'
+
 # SquareSpace git  
 #-----------------------------------------------------
 alias gsa='git add .'
@@ -42,41 +44,7 @@ alias gsp='git push squarespace master'
 # custom functions  
 #-----------------------------------------------------
 
-function ht() { cd /Applications/MAMP/htdocs/"$1" && ls ; }
-
-function dt() { cd ~/Desktop/"$1" && ls ; }  
-
-function wsp() { cd ~/Desktop/Workspace/"$1" && ls ; }  
-
-function drp() { cd ~/Dropbox/"$1" && ls ; }  
-
-function pcs() { cd ~/Desktop/PCS/"$1" && ls ; }  
-
-function to() { touch "$1" && mvim "$1" ; }  
-
-function tod() { mkdir "$1" && cd "$1" ; }  
-
-function sd() { cd ~/Desktop/Job/SubtleDigital/"$1" && ls ; }  
-
-function dot() { cd ~/bin/mc-dotfiles/"$1" && l ; }  
-
-function qtr() { cd ~/Desktop/PCS-projects/Quitter && ls; }
-
-function ofp() { cd ~/Desktop/PCS-projects/OurFamily && ls ; }
-
-function wsq() { ws ~/Desktop/PCS-projects/Quitter ; }
-
-function src() { cd ~/Documents/Source/"$1" && ls ; }  
-
-function fed() { cd ~/Documents/Source/FrontEndDev/FED/"$1" && ls ; }  
-
-function wiki() { cd ~/Documents/Source/wiki/"$1" && ls ; }  
-
-function hoah() { cd ~/Documents/HOAH/"$1" && ls ; }  
-
-function nav() { http-server ~/Desktop/ ; }  
-
-function par() { mvim ~/Desktop/ParkingLot.md ; }  
+function bead() { cd ~/Documents/Source/NS-SuiteScripts-git/"$1" && ls ; }  
 
 function ctag() { cp ~/Documents/Source/FrontEndDev/FED/html/tags/tag-template.html  ~/Documents/Source/FrontEndDev/FED/html/tags/"$1" ; }  
 
@@ -86,4 +54,42 @@ function ctemp() { cp ~/Documents/Source/FrontEndDev/FED/html/templates/temp-tem
 
 function ccat() { cp ~/Documents/Source/FrontEndDev/FED/html/category/cat-template.html  ~/Documents/Source/FrontEndDev/FED/html/category/"$1" ; }  
 
-function cinfo() { cp ~/Documents/Source/FrontEndDev/FED/html/info-item/info-template.html  ~/Documents/Source/FrontEndDev/FED/html/info-item/"$1" ; }  
+function cinfo() { cp ~/Documents/Source/FrontEndDev/FED/html/info-item/info-template.html  ~/Documents/Source/FrontEndDev/FED/html/info-item/"$1" ; }
+
+function dot() { cd ~/bin/mc-dotfiles/"$1" && l ; }  
+
+function drp() { cd ~/Dropbox/"$1" && ls ; }  
+
+function dt() { cd ~/Desktop/"$1" && ls ; }  
+
+function fed() { cd ~/Documents/Source/FrontEndDev/FED/"$1" && ls ; }  
+
+function hoah() { cd ~/Documents/HOAH/"$1" && ls ; }  
+
+function ht() { cd /Applications/MAMP/htdocs/"$1" && ls ; }
+
+function nav() { http-server ~/Desktop/ ; }  
+
+function ofp() { cd ~/Desktop/PCS-projects/OurFamily && ls ; }
+
+function par() { mvim ~/Desktop/ParkingLot.md ; }  
+
+function pcs() { cd ~/Desktop/PCS/"$1" && ls ; }  
+
+function qtr() { cd ~/Desktop/PCS-projects/Quitter && ls; }
+
+function ref() { cd ~/Desktop/Workspace/WT-RefCheckout/source/Custom-Checkout/"$1" && ls ; }  
+
+function sd() { cd ~/Desktop/Job/SubtleDigital/"$1" && ls ; }  
+
+function src() { cd ~/Documents/Source/"$1" && ls ; }  
+
+function to() { touch "$1" && mvim "$1" ; }  
+
+function tod() { mkdir "$1" && cd "$1" ; }  
+
+function wiki() { cd ~/Documents/Source/wiki/"$1" && ls ; }  
+
+function wsp() { cd ~/Desktop/Workspace/"$1" && ls ; }  
+
+  
