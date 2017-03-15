@@ -1,0 +1,11 @@
+#!/usr/bin/env python3  
+
+import os
+path = os.getcwd()
+filenames = os.listdir(path)
+for filename in filenames:
+    os.rename(filename, filename.replace(' ','_'))
+
+print('Python Rules!')  
+
+

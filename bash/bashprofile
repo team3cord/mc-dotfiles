@@ -12,3 +12,4 @@ fi
 #export PATH
 export PATH=~/bin:$PATH
 export PATH=~/bin/mc-dotfiles/bash:$PATH
+export PATH=~/bin/mc-dotfiles/py:$PATH  
