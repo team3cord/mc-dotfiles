@@ -70,17 +70,7 @@ function ht() { cd /Applications/MAMP/htdocs/"$1" && ls ; }
 
 function nav() { http-server ~/Desktop/ ; }  
 
-function ofp() { cd ~/Desktop/PCS-projects/OurFamily && ls ; }
-
-function par() { mvim ~/Desktop/ParkingLot.md ; }  
-
-function pcs() { cd ~/Desktop/PCS/"$1" && ls ; }  
-
-function qtr() { cd ~/Desktop/PCS-projects/Quitter && ls; }
-
-function ref() { cd ~/Desktop/Workspace/WT-RefCheckout/source/Custom-Checkout/"$1" && ls ; }  
-
-function sd() { cd ~/Desktop/Job/SubtleDigital/"$1" && ls ; }  
+function ref() { cd ~/Desktop/Workspace/WT_RefCheckout/source/Custom-Checkout/"$1" && ls ; }  
 
 function src() { cd ~/Documents/Source/"$1" && ls ; }  
 
