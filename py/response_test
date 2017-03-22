@@ -1,0 +1,23 @@
+#!/usr/bin/env python3 
+
+import urllib.request, urllib.error
+
+with open("/Users/mattcordeiro/Documents/HOAH/Workspace/404/nextopia_url_data1.txt") as f:
+    urls = list(f) 
+
+for url in urls:
+    try:
+        conn = urllib.request.urlopen(url)
+    except urllib.error.HTTPError as e:
+        # Return code error (e.g. 404, 501, ...)
+        # ...
+        print(url)
+        print(e.code)
+    except urllib.error.URLError as e:
+        # Not an HTTP-specific error (e.g. connection refused)
+        # ...
+        print('URLError')
+    else:
+        # 200
+        # ...
+        print('200')
