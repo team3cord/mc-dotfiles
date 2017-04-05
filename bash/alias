@@ -7,7 +7,7 @@ alias al='mvim ~/bin/mc-dotfiles/bash/alias'
 
 alias vhost='sudo vim  /private/etc/hosts'
 
-alias csvim='open ~/bin/mc-dotfiles/vim-cheet.png'
+alias cschmod='open ~/bin/mc-dotfiles/cheat/cs-chmod.png'
 
 alias csmd='open ~/bin/mc-dotfiles/cheat/cs-md.pdf'
 
