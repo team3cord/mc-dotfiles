@@ -35,9 +35,9 @@ alias brewup='brew update && brew upgrade'
 
 # virtualenv commands
 
-alias aenv = 'deactivate &> /dev/null; source ./venv/bin/activate'
+alias aenv='deactivate &> /dev/null; source ./venv/bin/activate'
 
-alias denv = 'deactivate'
+alias denv='deactivate'
 
 
 # custom functions  
