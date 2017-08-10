@@ -33,13 +33,12 @@ alias aliens='cat ~/bin/mc-dotfiles/bash/alias'
 
 alias brewup='brew update && brew upgrade'
 
-# SquareSpace git  
-#-----------------------------------------------------
-alias gsa='git add .'
+# virtualenv commands
 
-function gsc() { git commit -m '"$1"' ; }
+alias aenv = 'deactivate &> /dev/null; source ./venv/bin/activate'
 
-alias gsp='git push squarespace master'
+alias denv = 'deactivate'
+
 
 # custom functions  
 #-----------------------------------------------------
@@ -70,7 +69,7 @@ function ht() { cd /Applications/MAMP/htdocs/"$1" && ls ; }
 
 function nav() { http-server ~/Desktop/ ; }  
 
-function ref() { cd ~/Desktop/Workspace/WT_RefCheckout/source/Custom-Checkout/"$1" && ls ; }  
+function ref() { cd ~/Documents/Source/RefCheckout/source/Custom-Checkout/"$1" && ls ; }  
 
 function src() { cd ~/Documents/Source/"$1" && ls ; }  
 
@@ -82,4 +81,4 @@ function wiki() { cd ~/Documents/Source/wiki/"$1" && ls ; }
 
 function wsp() { cd ~/Desktop/Workspace/"$1" && ls ; }  
 
-  
+function pypr() { cd ~/Documents/Source/Python_Prjcts/"$1" && ls ; }
