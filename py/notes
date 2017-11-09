@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+
+import sys
+import datetime
+
+# create file with arg name and markdown extension in current directory
+filename = sys.argv[1]
+f = open(filename + '.md', 'w+')
+# Add header with arg plus "Notes" & current date & "---" to separate
+now = datetime.datetime.now()
+f.write('# ' + filename.title() + ' Notes \n')
+f.write('\n')
+f.write('* ' + now.strftime('%m.%d.%Y') + ' \n')
+f.write('\n')
+f.write('---\n')
+f.write('\n')
+# Add Summary secondary header with ENV: bullet  and empty bullet below that
+f.write('## Summary:\n')
+f.write('\n')
+f.write('* ENV  \n')
+f.write('\n')
+# Add Scripts secondary header with blank bullet
+f.write('## Scripts:\n')
+f.write('\n')
+f.write('*  \n')
+f.write('\n')
+# Add Notes secondary header with blank bullet
+f.write('## Notes:\n')
+f.write('\n')
+f.write('*  \n')
+f.write('\n')
+# Python Rules
+print('Python Rules!')
+
+# Options:
+# Check to see if the file exists first?
+# Open file with MacVim after it's created?
+
