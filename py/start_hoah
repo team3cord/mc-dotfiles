@@ -7,6 +7,5 @@ os.system('open /Applications/Microsoft\ Outlook.app')
 os.system('open /Applications/Slack.app')
 os.system('open /Applications/Google\ Chrome\ Canary.app')
 os.system('open /System/Library/CoreServices/Finder.app')
-os.system('open /System/Library/CoreServices/Finder.app')
 # Google Hangouts App
 # os.system('open ~/Applications/Chrome\ Apps.localized/knipolnnllmklapflnccelgolnpehhpl.app')
