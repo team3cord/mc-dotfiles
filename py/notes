@@ -14,18 +14,18 @@ f.write('* ' + now.strftime('%m.%d.%Y') + ' \n')
 f.write('\n')
 f.write('---\n')
 f.write('\n')
-# Add Summary secondary header with ENV: bullet  and empty bullet below that
-f.write('## Summary:\n')
+# Add Summary sub header with ENV: bullet  and empty bullet below that
+f.write('### Summary:\n')
 f.write('\n')
 f.write('* ENV  \n')
 f.write('\n')
-# Add Scripts secondary header with blank bullet
-f.write('## Scripts:\n')
+# Add Scripts sub header with blank bullet
+f.write('### Scripts:\n')
 f.write('\n')
 f.write('*  \n')
 f.write('\n')
-# Add Notes secondary header with blank bullet
-f.write('## Notes:\n')
+# Add Notes sub header with blank bullet
+f.write('### Notes:\n')
 f.write('\n')
 f.write('*  \n')
 f.write('\n')
