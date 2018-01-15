@@ -73,6 +73,8 @@ function ref() { cd ~/Documents/Source/RefCheckout/source/Custom-Checkout/"$1" &
 
 function src() { cd ~/Documents/Source/"$1" && ls ; }  
 
+function vault() { cd ~/Documents/Source/vault/"$1" && ls ; }  
+
 function to() { touch "$1" && mvim "$1" ; }  
 
 function tod() { mkdir "$1" && cd "$1" ; }  
