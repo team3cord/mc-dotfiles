@@ -51,13 +51,19 @@ syntax on
 set nocompatible
 syntax enable
 " set foldmethod=syntax
-set ignorecase
-set scrolloff=6  
-set autoindent
 set fileencoding=utf-8
 set encoding=utf-8
+" TABs are evils  
+set tabstop=4
+set softtabstop=4 
+set shiftwidth=4
+set shiftround  
+set expandtab
+" TABs are evils
+set scrolloff=6  
+" set autoindent
 set backspace=indent,eol,start
-set ts=2 sts=2 sw=2 expandtab
+set ignorecase
 set smartcase
 set gdefault
 set incsearch
