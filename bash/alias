@@ -23,15 +23,13 @@ alias csws='open ~/bin/mc-dotfiles/cheat/cs-webstorm.png'
 
 alias csex='open ~/bin/mc-dotfiles/cheat/cs-excel.pdf'  
 
-alias add-ssh='ssh-add ~/.ssh/matt3c'
+#alias add-ssh='ssh-add ~/.ssh/matt3c'
 
-alias flush='dscacheutil -flushcache' 
+#alias flush='dscacheutil -flushcache' 
 
 alias ppro='ping www.houseofantiquehardware.com'  
 
 alias aliens='cat ~/bin/mc-dotfiles/bash/alias'
-
-alias brewup='brew update && brew upgrade'
 
 # virtualenv commands
 
@@ -43,17 +41,6 @@ alias denv='deactivate'
 # custom functions  
 #-----------------------------------------------------
 
-# function bead() { cd ~/Documents/Source/NS-SuiteScripts-git/"$1" && ls ; }  
-
-# function ctag() { cp ~/Documents/Source/FrontEndDev/FED/html/tags/tag-template.html  ~/Documents/Source/FrontEndDev/FED/html/tags/"$1" ; }  
-
-# function ctab() { cp ~/Documents/Source/FrontEndDev/FED/html/tabs/tab-template.html  ~/Documents/Source/FrontEndDev/FED/html/tabs/"$1" ; }  
-
-# function ctemp() { cp ~/Documents/Source/FrontEndDev/FED/html/templates/temp-template.html  ~/Documents/Source/FrontEndDev/FED/html/templates/"$1" ; }  
-
-# function ccat() { cp ~/Documents/Source/FrontEndDev/FED/html/category/cat-template.html  ~/Documents/Source/FrontEndDev/FED/html/category/"$1" ; }  
-
-# function cinfo() { cp ~/Documents/Source/FrontEndDev/FED/html/info-item/info-template.html  ~/Documents/Source/FrontEndDev/FED/html/info-item/"$1" ; }
 
 function dot() { cd ~/bin/mc-dotfiles/"$1" && l ; }  
 
@@ -61,15 +48,7 @@ function drp() { cd ~/Dropbox/"$1" && ls ; }
 
 function dt() { cd ~/Desktop/"$1" && ls ; }  
 
-# function fed() { cd ~/Documents/Source/FrontEndDev/FED/"$1" && ls ; }  
-
-# function hoah() { cd ~/Documents/HOAH/"$1" && ls ; }  
-
-# function ht() { cd /Applications/MAMP/htdocs/"$1" && ls ; }
-
 function nav() { http-server ~/Desktop/ ; }  
-
-function ref() { cd ~/Documents/Source/RefCheckout/source/Custom-Checkout/"$1" && ls ; }  
 
 function src() { cd ~/Documents/Source/"$1" && ls ; }  
 
@@ -78,8 +57,6 @@ function vault() { cd ~/Documents/Source/vault/"$1" && ls ; }
 function to() { touch "$1" && mvim "$1" ; }  
 
 function tod() { mkdir "$1" && cd "$1" ; }  
-
-* function wiki() { cd ~/Documents/Source/wiki_ss/wiki/"$1" && ls ; }  
 
 function wsp() { cd ~/Desktop/Workspace/"$1" && ls ; }  
 
