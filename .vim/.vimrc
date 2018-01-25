@@ -8,6 +8,7 @@ set spell spell spelllang=en_us
 call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdtree'
     Plug 'scrooloose/syntastic'
+    Plug 'quanganhdo/grb256'
 call plug#end()
 " Vim Plug plugin mngr  
 syntax on
@@ -59,5 +60,5 @@ endfunction
 :set t_Co=256  
 :set background=dark  
 :colorscheme grb256   
-NERDTreeShowHidden=1
+let NERDTreeShowHidden=1
 " Custom macros  
