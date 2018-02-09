@@ -107,13 +107,10 @@ set softtabstop=4
 set shiftwidth=4
 set shiftround  
 set expandtab
-<<<<<<< HEAD
-=======
 " tab length exceptions on some file types
 autocmd FileType html setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType htmldjango setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4
->>>>>>> 1f2edc0098b40dab945c5d658382677183ccff74
 " TABs are evils
 set scrolloff=6  
 " set autoindent
@@ -188,10 +185,6 @@ map <F2> :TaskList<CR>
 
 " CtrlP ------------------------------
 
-<<<<<<< HEAD
-" let @cl = 'iconsole.log();'
-
-=======
 " file finder mapping
 let g:ctrlp_map = ',e'
 " tags (symbols) in current file finder mapping
@@ -336,4 +329,3 @@ let g:airline#extensions#whitespace#enabled = 0
 "let g:airline_symbols.readonly = '⭤'
 "let g:airline_symbols.linenr = '⭡':1
 "
->>>>>>> 1f2edc0098b40dab945c5d658382677183ccff74
