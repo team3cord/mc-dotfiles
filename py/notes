@@ -24,6 +24,11 @@ f.write('### Scripts:\n')
 f.write('\n')
 f.write('*  \n')
 f.write('\n')
+# Add Risks sub header with blank bullet
+f.write('### Risks:\n')
+f.write('\n')
+f.write('*  \n')
+f.write('\n')
 # Add Notes sub header with blank bullet
 f.write('### Notes:\n')
 f.write('\n')
