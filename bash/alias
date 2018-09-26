@@ -1,6 +1,8 @@
 # custom commands  
 #-----------------------------------------------------
 
+alias python='python3'
+
 alias l='ls -lAh' 
 
 alias al='mvim ~/bin/mc-dotfiles/bash/alias'
