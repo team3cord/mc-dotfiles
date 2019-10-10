@@ -20,7 +20,7 @@ f.write('\n')
 f.write('* ENV  \n')
 f.write('\n')
 # Add Scripts sub header with blank bullet
-f.write('### Scripts:\n')
+f.write('### Scripts/Components:\n')
 f.write('\n')
 f.write('*  \n')
 f.write('\n')

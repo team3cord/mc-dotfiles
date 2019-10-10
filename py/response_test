@@ -2,8 +2,9 @@
 
 import urllib.request, urllib.error
 
-# Point the scrit to a specific file with a list of fully formed URLs
-with open("/Users/mattcordeiro/Documents/HOAH/Workspace/404/nextopia_url_data1.txt") as f:
+# Point the script to a specific file with a list of fully formed URLs
+
+with open("/Users/mattcordeiro/Documents/HOAH/Workspace/img_url_audit/remaining_img_2.txt") as f:
     urls = list(f) 
 
 for url in urls:

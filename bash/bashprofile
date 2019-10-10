@@ -7,3 +7,4 @@ if [ -f ~/.bashrc ]; then
 fi
 
 
+export PATH="/usr/local/sbin:$PATH"
