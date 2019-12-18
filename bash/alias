@@ -90,3 +90,5 @@ function wiki() { cd ~/Documents/Source/wiki_ss/wiki/"$1" && ls ; }
 function wsp() { cd ~/Desktop/Workspace/"$1" && ls ; }  
 
 function pypr() { cd ~/Documents/Source/Python_Prjcts/"$1" && ls ; }
+
+function ytaudio() { youtube-dl -f 140 "$1" ; }  
