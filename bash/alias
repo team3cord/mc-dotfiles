@@ -3,6 +3,8 @@
 
 alias python='python3'
 
+alias pip='pip3'
+
 alias l='ls -lAh' 
 
 alias al='mvim ~/bin/mc-dotfiles/bash/alias'
@@ -24,6 +26,8 @@ alias csng='open ~/bin/mc-dotfiles/cheat/cs-ng.pdf'
 alias csws='open ~/bin/mc-dotfiles/cheat/cs-webstorm.png'
 
 alias csex='open ~/bin/mc-dotfiles/cheat/cs-excel.pdf'  
+
+alias dwn='cd ~/Downloads'  
 
 alias add-ssh='ssh-add ~/.ssh/matt3c'
 
@@ -86,3 +90,5 @@ function wiki() { cd ~/Documents/Source/wiki_ss/wiki/"$1" && ls ; }
 function wsp() { cd ~/Desktop/Workspace/"$1" && ls ; }  
 
 function pypr() { cd ~/Documents/Source/Python_Prjcts/"$1" && ls ; }
+
+function ytaudio() { youtube-dl -f 140 "$1" ; }  

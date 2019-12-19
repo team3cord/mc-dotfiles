@@ -30,8 +30,6 @@ call plug#begin('~/.vim/plugged')
     " Airline
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    " Terminal Vim with 256 colors colorscheme
-    Plug 'fisadev/fisa-vim-colorscheme'
     " Consoles as buffers
     Plug 'rosenfeld/conque-term'
     " Pending tasks list
@@ -57,7 +55,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'mhinz/vim-signify'
     " Automatically sort python imports
     Plug 'fisadev/vim-isort'
-    " Drag visual blocks arround
+    " Drag visual blocks around
     Plug 'fisadev/dragvisuals.vim'
     " Window chooser
     Plug 't9md/vim-choosewin'
@@ -84,8 +82,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-scripts/IndexedSearch'
     " XML/HTML tags navigation
     Plug 'vim-scripts/matchit.zip'
-    " Gvim colorscheme
-    Plug 'vim-scripts/Wombat'
+    " CURRENT colorscheme
+    Plug 'arcticicestudio/nord-vim'
     " Yank history navigation
     Plug 'vim-scripts/YankRing.vim'
 call plug#end()
@@ -155,6 +153,7 @@ endfunction
 ":set t_Co=256  
 ":set background=dark  
 ":colorscheme grb256   
+colorscheme nord  
 let NERDTreeShowHidden=1
 " Custom macros  
 " ============================================================================
