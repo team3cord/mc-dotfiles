@@ -105,13 +105,10 @@ set softtabstop=4
 set shiftwidth=4
 set shiftround  
 set expandtab
-<<<<<<< HEAD
-=======
 " tab length exceptions on some file types
 autocmd FileType html setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType htmldjango setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4
->>>>>>> master
 " TABs are evils
 set scrolloff=6  
 " set autoindent
