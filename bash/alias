@@ -87,7 +87,7 @@ function tod() { mkdir "$1" && cd "$1" ; }
 
 function wiki() { cd ~/Documents/Source/wiki_ss/wiki/"$1" && ls ; }  
 
-function wsp() { cd ~/Desktop/Workspace/"$1" && ls ; }  
+function wsp() { cd ~/Desktop/Workspace/0_BEAD/"$1" && ls ; }  
 
 function pypr() { cd ~/Documents/Source/Python_Prjcts/"$1" && ls ; }
 
