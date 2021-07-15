@@ -1,9 +1,9 @@
 # custom commands  
 #-----------------------------------------------------
 
-alias python='python3'
+alias python='python3.8'
 
-alias pip='pip3'
+alias pip='pip3.8'
 
 alias l='ls -lAh' 
 
@@ -39,12 +39,17 @@ alias aliens='cat ~/bin/mc-dotfiles/bash/alias'
 
 alias brewup='brew update && brew upgrade'
 
-# virtualenv commands
+# py virtualenv commands
 
 alias aenv='deactivate &> /dev/null; source ./venv/bin/activate'
 
 alias denv='deactivate'
 
+# node nodeenv commands
+ 
+alias neact='. env/bin/activate'
+
+alias nedeact='deactivate_node'
 
 # custom functions  
 #-----------------------------------------------------
@@ -78,6 +83,12 @@ function nav() { http-server ~/Desktop/ ; }
 function ref() { cd ~/Documents/Source/RefCheckout/source/Custom-Checkout/"$1" && ls ; }  
 
 function src() { cd ~/Documents/Source/"$1" && ls ; }  
+
+function sca() { cd ~/Documents/Source/NodeEnv/SCA && neact && cd ~/Documents/Source/NodeEnv/SCA/env/hoah_sca ; }  
+
+function scaext() { cd ~/Documents/Source/NodeEnv/SCA && neact && cd ~/Documents/Source/NodeEnv/SCA/env/hoah_sca/Extensions ; }  
+
+function scath() { cd ~/Documents/Source/NodeEnv/SCA && neact && cd ~/Documents/Source/NodeEnv/SCA/env/hoah_sca/Theme ; }  
 
 function vault() { cd ~/Documents/Source/vault/"$1" && ls ; }  
 

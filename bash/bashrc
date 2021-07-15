@@ -5,7 +5,7 @@
 export PATH=~/bin:$PATH
 export PATH=~/bin/mc-dotfiles/bash:$PATH
 export PATH=~/bin/mc-dotfiles/py:$PATH
-
+export BASH_SILENCE_DEPRECIATION_WARNING=1  
 #-------------------------------------------------------------
 # custom commands
 #-------------------------------------------------------------
