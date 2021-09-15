@@ -84,11 +84,11 @@ function ref() { cd ~/Documents/Source/RefCheckout/source/Custom-Checkout/"$1" &
 
 function src() { cd ~/Documents/Source/"$1" && ls ; }  
 
-function sca() { cd ~/Documents/Source/NodeEnv/SCA && neact && cd ~/Documents/Source/NodeEnv/SCA/env/hoah_sca ; }  
+function sca() { cd ~/Documents/Source/node_env/SCA && neact && cd ~/Documents/Source/node_env/SCA/env/hoah_sca ; }  
 
-function scaext() { cd ~/Documents/Source/NodeEnv/SCA && neact && cd ~/Documents/Source/NodeEnv/SCA/env/hoah_sca/Extensions ; }  
+function scaext() { cd ~/Documents/Source/node_env/SCA && neact && cd ~/Documents/Source/node_env/SCA/env/hoah_sca/Extensions ; }  
 
-function scath() { cd ~/Documents/Source/NodeEnv/SCA && neact && cd ~/Documents/Source/NodeEnv/SCA/env/hoah_sca/Theme ; }  
+function scath() { cd ~/Documents/Source/node_env/SCA && neact && cd ~/Documents/Source/node_env/SCA/env/hoah_sca/Theme ; }  
 
 function vault() { cd ~/Documents/Source/vault/"$1" && ls ; }  
 
