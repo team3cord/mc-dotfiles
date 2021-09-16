@@ -10,6 +10,19 @@
 * vim plugin mngr: vim-plug => mkdir ~/.vim/autoload/ => download vim-plug => vim any file run :PlugInstall => reload vim  
 * iterm2: config/MC_NORD  
 
+---  
+
+### Homebrew:  
+
+|Formulae         |Casks   |
+|-----------------|--------|
+|bash-completion  |alfred  |  
+|bash-git-prompt  |iterm2  |
+|python3          |        |  
+
+
+---  
+
 * TODO's  
     * add in gulpfile & separate bash/js scripts => concat  
     * include all npm packages set up to global  
