@@ -52,6 +52,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'honza/vim-snippets'
     Plug 'garbas/vim-snipmate'
     " Git/mercurial/others diff icons on the side of the file lines
+    let g:snipMate = { 'snippet_version' : 1 }
     Plug 'mhinz/vim-signify'
     " Automatically sort python imports
     Plug 'fisadev/vim-isort'
