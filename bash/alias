@@ -39,6 +39,8 @@ alias aliens='cat ~/bin/mc-dotfiles/bash/alias'
 
 alias brewup='brew update && brew upgrade'
 
+alias pzip='zip -r products.zip products.csv -x "*.DS_Store" -x "__MACOSX"'
+
 # py virtualenv commands
 
 alias aenv='deactivate &> /dev/null; source ./venv/bin/activate'
@@ -47,9 +49,10 @@ alias denv='deactivate'
 
 # node nodeenv commands
  
-alias neact='. env/bin/activate'
+alias naenv='. env/bin/activate'
 
-alias nedeact='deactivate_node'
+alias ndenv='deactivate_node'
+
 
 # custom functions  
 #-----------------------------------------------------
