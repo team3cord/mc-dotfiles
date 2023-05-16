@@ -39,6 +39,12 @@ alias aenv='deactivate &> /dev/null; source ./venv/bin/activate'
 
 alias denv='deactivate'
 
+# node nodeenv commands
+ 
+alias naenv='. env/bin/activate'
+
+alias ndenv='deactivate_node'
+
 
 # custom functions  
 #-----------------------------------------------------
