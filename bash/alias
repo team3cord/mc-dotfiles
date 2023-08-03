@@ -19,6 +19,8 @@ alias csreg='open ~/bin/mc-dotfiles/cheat/cs-regex.jpg'
 
 alias csvim='open ~/bin/mc-dotfiles/cheat/cs-vim.jpg'
 
+alias csvenv='open ~/bin/mc-dotfiles/cheat/cs-venv.png'
+
 alias csnerd='open ~/bin/mc-dotfiles/cheat/cs-nerd.pdf'
 
 alias csng='open ~/bin/mc-dotfiles/cheat/cs-ng.pdf'
