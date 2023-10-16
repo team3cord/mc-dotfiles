@@ -77,7 +77,7 @@ function to() { touch "$1" && mvim "$1" ; }
 
 function tod() { mkdir "$1" && cd "$1" ; }  
 
-function wsp() { cd ~/Desktop/Workspace/"$1" && ls ; }  
+function wsp() { cd ~/Documents/Workspace/"$1" && ls ; }  
 
 function pypr() { cd ~/Documents/Source/py/"$1" && ls ; }
 
