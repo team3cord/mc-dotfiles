@@ -5,7 +5,9 @@
 export PATH=~/bin:$PATH
 export PATH=~/bin/mc-dotfiles/bash:$PATH
 export PATH=~/bin/mc-dotfiles/py:$PATH
+export PATH=/opt/homebrew/bin:$PATH
 export BASH_SILENCE_DEPRECATION_WARNING=1  
+
 #-------------------------------------------------------------
 # custom commands
 #-------------------------------------------------------------

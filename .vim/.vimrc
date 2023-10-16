@@ -55,7 +55,7 @@ call plug#begin('~/.vim/plugged')
     let g:snipMate = { 'snippet_version' : 1 }
     Plug 'mhinz/vim-signify'
     " Automatically sort python imports
-    Plug 'fisadev/vim-isort'
+    " Plug 'fisadev/vim-isort'
     " Drag visual blocks around
     Plug 'fisadev/dragvisuals.vim'
     " Window chooser
