@@ -2,6 +2,6 @@
 
 import os
 
-os.system('open ~/Applications/Google\ Chrome.app')
-os.system('open ~/Applications/Slack.app')
+os.system('open /Applications/Google\ Chrome.app')
+os.system('open /Applications/Slack.app')
 os.system('open /System/Library/CoreServices/Finder.app')
