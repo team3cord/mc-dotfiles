@@ -6,7 +6,8 @@
 ---  
 
 * git clone  target ~/bin/  
-* ln -s original target vimrc, bashrc, bash_profile, gitconfig, gitignore_global 
+* ln -s original target vimrc, bashrc, bash_profile, gitconfig, gitignore_global => **must use full path** 
+* git prompt => git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1   
 * vim plugin mngr: vim-plug => mkdir ~/.vim/autoload/ => download vim-plug => vim any file run :PlugInstall => reload vim  
 * iterm2: config/MC_NORD  
 
