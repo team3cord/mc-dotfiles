@@ -6,7 +6,8 @@
 ---  
 
 * git clone  target ~/bin/  
-* ln -s original target vimrc, bashrc, bash_profile, gitconfig, gitignore_global => **must use full path** 
+* PYTHON $symlinks => will create symlinks for vimrc,bashrc & bash_profile  
+* ln -s original target  gitconfig, gitignore_global => **must use full path** 
 * git prompt => git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1   
 * vim plugin mngr: vim-plug => mkdir ~/.vim/autoload/ => download vim-plug => vim any file run :PlugInstall => reload vim  
 * iterm2: config/MC_NORD  
@@ -23,6 +24,10 @@
 
 
 ---  
+
+### ISSUES:  
+
+* vim plugin => neocomplcache is wonky, commented out of vimrc  
 
 * TODO's  
     * add in gulpfile & separate bash/js scripts => concat  

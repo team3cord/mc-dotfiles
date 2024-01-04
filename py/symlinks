@@ -1,0 +1,30 @@
+#!/usr/bin/env python3  
+
+import os
+
+def create_symlink(source, target):
+    try:
+        os.symlink(source, target)
+        print(f"Symbolic link created from {source} to {target}")
+    except FileExistsError:
+        print(f"Symbolic link already exists at {target}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+def main():
+    # Set the source paths
+    bashrc_src_path = os.path.expanduser('~/bin/mc-dotfiles/bash/bashrc')
+    bash_profile_src_path = os.path.expanduser('~/bin/mc-dotfiles/bash/bashprofile')
+    vimrc_src_path = os.path.expanduser('~/bin/mc-dotfiles/.vim/.vimrc')
+
+    # Set the target paths
+    target_paths = [os.path.expanduser('~/.bashrc'), os.path.expanduser('~/.bash_profile'), os.path.expanduser('~/.vimrc')]
+
+    # Create symbolic links for each target
+    for source_path, target_path in zip([bashrc_src_path, bash_profile_src_path,vimrc_src_path], target_paths):
+        create_symlink(source_path, target_path)
+
+
+if __name__ == "__main__":
+    main()
+
