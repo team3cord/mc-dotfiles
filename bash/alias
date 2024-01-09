@@ -29,6 +29,8 @@ alias csws='open ~/bin/mc-dotfiles/cheat/cs-webstorm.png'
 
 alias csex='open ~/bin/mc-dotfiles/cheat/cs-excel.pdf'  
 
+alias csvs='open ~/bin/mc-dotfiles/cheat/cs-vscode.pdf'  
+
 alias dwn='cd ~/Downloads'  
 
 alias add-ssh='ssh-add ~/.ssh/3cord'
