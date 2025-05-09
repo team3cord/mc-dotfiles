@@ -9,6 +9,8 @@
 * ln -s original target vimrc, bashrc, bash_profile, gitconfig, gitignore_global 
 * vim plugin mngr: vim-plug => mkdir ~/.vim/autoload/ => download vim-plug => vim any file run :PlugInstall => reload vim  
 * iterm2: config/MC_NORD  
+* git config --global core.excludesFile ~/.gitignore_global
+* KEYCHRON: config/mc_keychron.json
 
 ---  
 
