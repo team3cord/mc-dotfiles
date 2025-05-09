@@ -10,6 +10,8 @@
 * git prompt => git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1   
 * vim plugin mngr: vim-plug => mkdir ~/.vim/autoload/ => download vim-plug => vim any file run :PlugInstall => reload vim  
 * iterm2: config/MC_NORD  
+* git config --global core.excludesFile ~/.gitignore_global
+* KEYCHRON: config/mc_keychron.json
 
 ---  
 

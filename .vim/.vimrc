@@ -45,7 +45,7 @@ call plug#begin('~/.vim/plugged')
     " Python autocompletion, go to definition.
     Plug 'davidhalter/jedi-vim'
     " Better autocompletion
-    Plug 'Shougo/neocomplcache.vim'
+    "Plug 'Shougo/neocomplcache.vim'
     " Snippets manager (SnipMate), dependencies, and snippets repo
     Plug 'MarcWeber/vim-addon-mw-utils'
     Plug 'tomtom/tlib_vim'
