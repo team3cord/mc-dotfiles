@@ -4,8 +4,5 @@ import os
 
 os.system('open /Applications/Google\ Chrome.app')
 os.system('open /Applications/Microsoft\ Outlook.app')
-os.system('open /Applications/Slack.app')
-os.system('open /Applications/Google\ Chrome\ Canary.app')
+os.system('open /Applications/Microsoft\ Teams.app')
 os.system('open /System/Library/CoreServices/Finder.app')
-# Google Chat App
-os.system('open ~/Applications/Chrome\ Apps.localized/Google\ Chat.app')
