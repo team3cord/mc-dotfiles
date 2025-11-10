@@ -1,0 +1,107 @@
+#!/usr/bin/env python3
+"""
+Copy all .json files from the current working directory (and its subfolders)
+into a target directory created *one level up* from where this script is run.
+
+All JSON files are copied directly into the target folder (no subdirectories preserved).
+
+This script is designed to live in ~/bin so you can run it from anywhere.
+
+Usage
+-----
+    copy_jsons.py <target-folder-name> [--overwrite] [--dry-run]
+
+Example
+-------
+If you are in /path/to/project/data and run:
+    copy_jsons.py 10-14
+then all .json files under /path/to/project/data and its subdirectories
+will be copied to /path/to/project/10-14 (flat, no subfolders).
+"""
+from __future__ import annotations
+
+import argparse
+import sys
+from pathlib import Path
+from shutil import copy2
+
+
+def build_parser() -> argparse.ArgumentParser:
+    p = argparse.ArgumentParser(
+        description=(
+            "Copy all .json files from the current working directory recursively "
+            "into a target directory created one level up (flat, no subdirectories)."
+        )
+    )
+    p.add_argument(
+        "target_name",
+        help="Name of the target folder (created one level up from the current directory).",
+    )
+    p.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Overwrite destination files when they already exist.",
+    )
+    p.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Show what would be copied without making any changes.",
+    )
+    return p
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = build_parser()
+    args = parser.parse_args(argv)
+
+    # The directory where the user runs the script
+    search_root = Path.cwd()
+    # The parent directory of where the script is run
+    parent_dir = search_root.parent
+    # The target directory lives one level up
+    target_dir = parent_dir / args.target_name
+
+    if not args.dry_run:
+        target_dir.mkdir(parents=True, exist_ok=True)
+
+    copied = 0
+    skipped = 0
+    errors = 0
+
+    for src in search_root.rglob("*.json"):
+        if not src.is_file():
+            continue
+
+        dest = target_dir / src.name
+
+        try:
+            if dest.exists() and not args.overwrite:
+                skipped += 1
+                print(f"SKIP (exists): {src} -> {dest}")
+                continue
+
+            action = "COPY"
+            if dest.exists() and args.overwrite:
+                action = "OVERWRITE"
+
+            print(f"{action}: {src} -> {dest}")
+            if not args.dry_run:
+                copy2(src, dest)
+            copied += 1
+        except Exception as e:
+            errors += 1
+            print(f"ERROR: {src} -> {dest} ({e})", file=sys.stderr)
+
+    print("\nSummary")
+    print("-------")
+    print(f"Search root      : {search_root}")
+    print(f"Target directory : {target_dir}")
+    print(f"Copied/Overwrote : {copied}")
+    print(f"Skipped          : {skipped}")
+    print(f"Errors           : {errors}")
+
+    return 0 if errors == 0 else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
