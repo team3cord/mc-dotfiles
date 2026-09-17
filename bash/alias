@@ -66,6 +66,8 @@ alias ndenv='deactivate_node'
 # custom functions  
 #-----------------------------------------------------
 
+function clprj() { cd ~/Documents/Claude/Projects/"$1" && ls ; }  
+
 function dot() { cd ~/bin/mc-dotfiles/"$1" && l ; }  
 
 function drp() { cd ~/Dropbox/"$1" && ls ; }  
