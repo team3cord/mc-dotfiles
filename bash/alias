@@ -31,7 +31,8 @@ alias csex='open ~/bin/mc-dotfiles/cheat/cs-excel.pdf'
 
 alias csvs='open ~/bin/mc-dotfiles/cheat/cs-vscode.pdf'
 
-alias cstmux='open ~/bin/mc-dotfiles/cheat/cs-tmux.png'  
+alias cstmux='open ~/bin/mc-dotfiles/cheat/cs-tmux.png'
+alias csclaudecc='open ~/bin/mc-dotfiles/cheat/cs-claude.png'
 
 alias ds='find . -name ".DS_Store" -print -delete'
 
