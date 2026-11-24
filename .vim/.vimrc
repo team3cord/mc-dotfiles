@@ -45,16 +45,17 @@ call plug#begin('~/.vim/plugged')
     " Python autocompletion, go to definition.
     Plug 'davidhalter/jedi-vim'
     " Better autocompletion
-    " Plug 'Shougo/neocomplcache.vim'
+    "Plug 'Shougo/neocomplcache.vim'
     " Snippets manager (SnipMate), dependencies, and snippets repo
     Plug 'MarcWeber/vim-addon-mw-utils'
     Plug 'tomtom/tlib_vim'
     Plug 'honza/vim-snippets'
     Plug 'garbas/vim-snipmate'
     " Git/mercurial/others diff icons on the side of the file lines
+    let g:snipMate = { 'snippet_version' : 1 }
     Plug 'mhinz/vim-signify'
     " Automatically sort python imports
-    Plug 'fisadev/vim-isort'
+    " Plug 'fisadev/vim-isort'
     " Drag visual blocks around
     Plug 'fisadev/dragvisuals.vim'
     " Window chooser
@@ -86,6 +87,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'arcticicestudio/nord-vim'
     " Yank history navigation
     Plug 'vim-scripts/YankRing.vim'
+    " Seamless navigation between tmux panes and vim splits
+    Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 " Vim Plug plugin mngr  
 syntax on
@@ -249,21 +252,21 @@ nmap ,D :tab split<CR>:call jedi#goto()<CR>
 " most of them not documented because I'm not sure how they work
 " (docs aren't good, had to do a lot of trial and error to make 
 " it play nice)
-" let g:neocomplcache_enable_at_startup = 1
-" let g:neocomplcache_enable_ignore_case = 1
-" let g:neocomplcache_enable_smart_case = 1
-" let g:neocomplcache_enable_auto_select = 1
-" let g:neocomplcache_enable_fuzzy_completion = 1
-" let g:neocomplcache_enable_camel_case_completion = 1
-" let g:neocomplcache_enable_underbar_completion = 1
-" let g:neocomplcache_fuzzy_completion_start_length = 1
-" let g:neocomplcache_auto_completion_start_length = 1
-" let g:neocomplcache_manual_completion_start_length = 1
-" let g:neocomplcache_min_keyword_length = 1
-" let g:neocomplcache_min_syntax_length = 1
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_ignore_case = 1
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_enable_auto_select = 1
+let g:neocomplcache_enable_fuzzy_completion = 1
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplcache_fuzzy_completion_start_length = 1
+let g:neocomplcache_auto_completion_start_length = 1
+let g:neocomplcache_manual_completion_start_length = 1
+let g:neocomplcache_min_keyword_length = 1
+let g:neocomplcache_min_syntax_length = 1
 " complete with workds from any opened file
-" let g:neocomplcache_same_filetype_lists = {}
-" let g:neocomplcache_same_filetype_lists._ = '_'
+let g:neocomplcache_same_filetype_lists = {}
+let g:neocomplcache_same_filetype_lists._ = '_'
 
 " TabMan ------------------------------
 
@@ -312,7 +315,7 @@ let g:choosewin_overlay_enable = 1
 " Airline ------------------------------
 
 let g:airline_powerline_fonts = 0
-let g:airline_theme = 'bubblegum'
+let g:airline_theme = 'nord'
 let g:airline#extensions#whitespace#enabled = 0
 
 " to use fancy symbols for airline, uncomment the following lines and use a
@@ -328,3 +331,12 @@ let g:airline#extensions#whitespace#enabled = 0
 "let g:airline_symbols.readonly = '⭤'
 "let g:airline_symbols.linenr = '⭡':1
 "
+
+" vim-tmux-navigator ------------------------------
+" Seamless Ctrl-hjkl navigation between vim splits and tmux panes
+
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <C-h> :TmuxNavigateLeft<CR>
+nnoremap <silent> <C-j> :TmuxNavigateDown<CR>
+nnoremap <silent> <C-k> :TmuxNavigateUp<CR>
+nnoremap <silent> <C-l> :TmuxNavigateRight<CR>

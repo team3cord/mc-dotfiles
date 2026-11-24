@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+# cct — open Claude Code projects as tmux windows (one window per project)
+#
+#   cct ~/proj-a ~/proj-b      open/attach session "claude" with a window per project
+#   cct                        re-attach to the session
+#   cct -s work ~/proj-c       use a different session name
+#   cct -l                     list sessions
+#
+# Re-running with a project that's already open just switches to it.
+set -euo pipefail
+
+SESSION="${CCT_SESSION:-claude}"
+CLAUDE_CMD="${CCT_CLAUDE_CMD:-claude}"
+
+usage() { sed -n '2,9p' "$0" | sed 's/^# \{0,1\}//'; exit "${1:-0}"; }
+
+while getopts "s:lh" opt; do
+  case $opt in
+    s) SESSION=$OPTARG ;;
+    l) tmux ls 2>/dev/null || echo "no tmux sessions"; exit 0 ;;
+    h) usage 0 ;;
+    *) usage 1 ;;
+  esac
+done
+shift $((OPTIND - 1))
+
+command -v tmux >/dev/null || { echo "tmux is not installed (sudo apt install tmux)" >&2; exit 1; }
+
+attach() {
+  if [ -n "${TMUX:-}" ]; then tmux switch-client -t "$1"; else tmux attach -t "$1"; fi
+}
+
+if [ $# -eq 0 ]; then
+  tmux has-session -t "=$SESSION" 2>/dev/null || { echo "no session '$SESSION'"; usage 1; }
+  attach "=$SESSION"
+  exit 0
+fi
+
+last=""
+for arg in "$@"; do
+  dir=$(realpath -e "$arg" 2>/dev/null) && [ -d "$dir" ] || { echo "skip: not a directory: $arg" >&2; continue; }
+  name=$(basename "$dir")
+
+  if tmux has-session -t "=$SESSION" 2>/dev/null; then
+    # Already open? reuse that window.
+    existing=$(tmux list-windows -t "=$SESSION" -F '#{window_id} #{@project}' | awk -v d="$dir" '$2==d {print $1; exit}')
+    if [ -n "$existing" ]; then last=$existing; continue; fi
+    win=$(tmux new-window -d -t "=$SESSION:" -n "$name" -c "$dir" -P -F '#{window_id}')
+  else
+    win=$(tmux new-session -d -s "$SESSION" -n "$name" -c "$dir" -P -F '#{window_id}')
+  fi
+
+  tmux set-option -w -t "$win" @project "$dir"
+  # Run claude inside the shell, so quitting claude leaves you at a prompt in the project
+  tmux send-keys -t "$win" "$CLAUDE_CMD" Enter
+  last=$win
+done
+
+[ -n "$last" ] || exit 1
+tmux select-window -t "$last"
+attach "=$SESSION"

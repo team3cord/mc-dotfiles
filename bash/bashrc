@@ -5,6 +5,7 @@
 export PATH=~/bin:$PATH
 export PATH=~/bin/mc-dotfiles/bash:$PATH
 export PATH=~/bin/mc-dotfiles/py:$PATH
+export PATH=~/.local/bin:$PATH
 
 #-------------------------------------------------------------
 # custom commands
@@ -15,26 +16,37 @@ source ~/bin/mc-dotfiles/bash/alias
 source ~/bin/mc-dotfiles/bash/prompt
 
 #------------------------------------------------------------
-# include for  
+# bash completion (Ubuntu's ~/.bashrc normally loads this already)
 #------------------------------------------------------------
 
-if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
-    GIT_PROMPT_ONLY_IN_REPO=1
-    source $HOME/.bash-git-prompt/gitprompt.sh
-fi                              
-
+if ! declare -F _completion_loader >/dev/null && [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+fi
 
 #------------------------------------------------------------
-# custom prompt
+# git prompt — git's built-in __git_ps1 (ships with the git package)
 #------------------------------------------------------------
 
-export PS1="\[\e[00;32m\]\h\[\e[0m\]\[\e[00;37m\].\[\e[0m\]\[\e[00;32m\]\u\[\e[0m\]\[\e[01;37m\][\[\e[0m\]\[\e[00;35m\]\w\[\e[0m\]\[\e[01;37m\]]\[\e[0m\]\[\e[00;37m\] \[\e[0m\]\[\e[00;32m\]\\$:\[\e[0m\]$"
+if ! declare -F __git_ps1 >/dev/null && [ -f /usr/lib/git-core/git-sh-prompt ]; then
+    . /usr/lib/git-core/git-sh-prompt
+fi
+
+GIT_PS1_SHOWDIRTYSTATE=1      # *  unstaged changes   +  staged changes
+GIT_PS1_SHOWUNTRACKEDFILES=1  # %  untracked files
+GIT_PS1_SHOWSTASHSTATE=1      # $  something is stashed
+GIT_PS1_SHOWUPSTREAM=auto     # <  behind   >  ahead   <> diverged   =  in sync
+
+#------------------------------------------------------------
+# custom prompt   host.user[path] $: (branch *%>)$
+# single quotes so $(__git_ps1) re-runs at every prompt
+#------------------------------------------------------------
+
+PS1='\[\e[00;32m\]\h\[\e[00;37m\].\[\e[00;32m\]\u\[\e[01;37m\][\[\e[00;35m\]\w\[\e[01;37m\]]\[\e[00;32m\] \$:\[\e[0m\]$(__git_ps1 " (%s)")\$ '
 
 #------------------------------------------------------------
 # custom ls
 #------------------------------------------------------------
 
-alias ls='ls -FHG'
-#LS_COLORS='di=35:fi=0:ln=36:pi=0:so=0:bd=0:cd=0:or=0:ex=35:*rpm=0'
-LSCOLORS='fxbhfxbxdxbxegedabagahad'
-export LSCOLORS 
+alias ls='ls -F --color=auto'
+# same colors as the macOS LSCOLORS='fxbhfxbxdx...' (dirs magenta, links red/grey, exec yellow)
+export LS_COLORS="${LS_COLORS}:di=35:ln=31;47:so=35:pi=31:ex=33"
