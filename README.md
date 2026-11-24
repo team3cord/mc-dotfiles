@@ -28,7 +28,21 @@
 
 * `cct ~/proj-a ~/proj-b` — one tmux window per project, each running `claude` (`bash/cct`)
 * `cct` re-attaches; `cct -s name …` uses another session; `prefix + C` opens a project from inside tmux
-* In Claude Code `/config`, set notifications to **terminal bell** — a window waiting on you turns yellow
+* **Tab colors by Claude state** — `bash/claude-tmux-state` runs from Claude Code hooks and tags each tmux window:
+  blue `…` working · yellow `!` needs you · green `✓` done (clears when you visit) · grey idle.
+  Hooks live in `~/.claude/settings.json` (SessionStart, UserPromptSubmit, PreToolUse, PostToolUse,
+  Notification `permission_prompt|elicitation_dialog`, Stop, SessionEnd), each running
+  `~/bin/mc-dotfiles/bash/claude-tmux-state`. Needs `jq`.
+* **Claude Code Nord theme:** `claude/themes/nord.json` (works on macOS and Linux)
+  `mkdir -p ~/.claude/themes && ln -s ~/bin/mc-dotfiles/claude/themes/nord.json ~/.claude/themes/nord.json`
+  then pick **Nord** in `/theme` (or `"theme": "custom:nord"` in `~/.claude/settings.json`)
+* **Claude Code hooks (tab colors):** merge `claude/settings.hooks.json` into `~/.claude/settings.json`
+  (don't symlink settings.json — Claude rewrites it):
+  `jq -s '.[0] * .[1]' ~/.claude/settings.json ~/bin/mc-dotfiles/claude/settings.hooks.json > /tmp/s.json && mv /tmp/s.json ~/.claude/settings.json`
+  macOS needs `brew install jq`
+* **Nord terminal (GNOME Terminal):** nord-tmux uses the terminal's palette, so load the Nord profile:
+  `uuid=$(uuidgen); dconf load /org/gnome/terminal/legacy/profiles:/:$uuid/ < config/nord-gnome-terminal.dconf`
+  then add `$uuid` to `org.gnome.Terminal.ProfilesList list` (or pick it in Preferences)
 * Cheat sheet: `cstmux` or `cstmx` (tmux + Claude Code, `cheat/cs-tmux.png`)
 
 

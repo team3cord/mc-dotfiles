@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# claude-tmux-state — Claude Code hook: tag this tmux window with Claude's state.
+# tmux.conf colors the window tab from @claude_state:
+#   working = blue   waiting (needs you) = yellow   done = green   idle = grey
+# Wired up in ~/.claude/settings.json for: SessionStart, UserPromptSubmit,
+# PreToolUse, PostToolUse, Notification, Stop, SessionEnd.
+# Does nothing outside tmux. Always exits 0 so it can never block Claude.
+
+input=$(cat)
+[ -n "$TMUX_PANE" ] && command -v tmux >/dev/null || exit 0
+
+IFS=$'\t' read -r event tool ntype < <(jq -r '[.hook_event_name // "", .tool_name // "-", .notification_type // "-"] | @tsv' <<<"$input" 2>/dev/null)
+
+case "$event" in
+  UserPromptSubmit|PostToolUse) state=working ;;
+  PreToolUse)       [ "$tool" = AskUserQuestion ] && state=waiting || state=working ;;
+  Notification)     [ "$ntype" = idle_prompt ] && exit 0; state=waiting ;;  # permission prompts, dialogs
+  Stop)             state=done ;;
+  SessionStart)     state=idle ;;
+  SessionEnd)       tmux set -w -t "$TMUX_PANE" -u @claude_state 2>/dev/null; exit 0 ;;
+  *)                exit 0 ;;
+esac
+
+tmux set -w -t "$TMUX_PANE" @claude_state "$state" 2>/dev/null
+exit 0
