@@ -69,6 +69,17 @@ nnoremap <silent> <C-k> :TmuxNavigateUp<CR>
 nnoremap <silent> <C-l> :TmuxNavigateRight<CR>
 ```
 
+### Claude Code + tmux
+
+* **Tab colors by Claude state** — `bash/claude-tmux-state` runs from Claude Code hooks and tags each tmux window:
+  blue `…` working · yellow `!` needs you · green `✓` done (clears when you visit) · grey idle.
+  Needs `brew install jq`. Merge the hooks into `~/.claude/settings.json` (don't symlink it — Claude rewrites it):
+  `jq -s '.[0] * .[1]' ~/.claude/settings.json ~/bin/mc-dotfiles/claude/settings.hooks.json > /tmp/s.json && mv /tmp/s.json ~/.claude/settings.json`
+* **Claude Code Nord theme:** `claude/themes/nord.json`
+  `mkdir -p ~/.claude/themes && ln -s ~/bin/mc-dotfiles/claude/themes/nord.json ~/.claude/themes/nord.json`
+  then pick **Nord** in `/theme` (or `"theme": "custom:nord"` in `~/.claude/settings.json`)
+* `prefix + C` opens a project path in a new window running `claude`
+
 ---
 
 ### vim / vim-airline
