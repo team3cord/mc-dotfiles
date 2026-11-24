@@ -38,7 +38,7 @@ alias cstmux="xdg-open $CHEAT/cs-tmux.png"
 
 alias cscl="xdg-open $CHEAT/cs-claude.png"
 
-alias cstmx="xdg-open $CHEAT/cs-tmux-claude.png"
+alias cstmx="xdg-open $CHEAT/cs-tmux.png"   # same sheet as cstmux
 
 alias dwn='cd ~/Downloads'
 
