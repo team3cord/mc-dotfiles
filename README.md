@@ -29,7 +29,7 @@
 * `cct ~/proj-a ~/proj-b` — one tmux window per project, each running `claude` (`bash/cct`)
 * `cct` re-attaches; `cct -s name …` uses another session; `prefix + C` opens a project from inside tmux
 * In Claude Code `/config`, set notifications to **terminal bell** — a window waiting on you turns yellow
-* Cheat sheet: `cscc`
+* Cheat sheet: `cstmx` (Claude + tmux, Linux) · `cstmux` (original Mac tmux sheet)
 
 
 ---  
