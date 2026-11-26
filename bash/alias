@@ -35,6 +35,8 @@ alias cstmux='open ~/bin/mc-dotfiles/cheat/cs-tmux.png'
 
 alias cscl='open ~/bin/mc-dotfiles/cheat/cs-claude.png'
 
+alias csherdr='open ~/bin/mc-dotfiles/cheat/cs-herdr.png'
+
 alias ds='find . -name ".DS_Store" -print -delete'
 
 alias dwn='cd ~/Downloads'  
