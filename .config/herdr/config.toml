@@ -1,0 +1,4 @@
+onboarding = false
+
+[ui]
+prompt_new_workspace_name = true
