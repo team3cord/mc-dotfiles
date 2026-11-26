@@ -84,3 +84,16 @@ nnoremap <silent> <C-l> :TmuxNavigateRight<CR>
 - tmux status bar: `arcticicestudio/nord-tmux`
 
 ---
+
+### herdr Setup
+
+**Config:** `.config/herdr/config.toml` — symlink to `~/.config/herdr/config.toml` (same on macOS and Linux)
+```
+mkdir -p ~/.config/herdr && ln -sf ~/bin/mc-dotfiles/.config/herdr/config.toml ~/.config/herdr/config.toml
+herdr server reload-config
+```
+**Prefix:** `Ctrl-b` (herdr default; tmux uses `Ctrl-Space`, so no clash). New workspaces prompt for a name.
+
+**Cheat sheet:** `csherdr` → `cheat/cs-herdr.png`
+
+---
