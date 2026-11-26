@@ -94,6 +94,6 @@ herdr server reload-config
 ```
 **Prefix:** `Ctrl-b` (herdr default; tmux uses `Ctrl-Space`, so no clash). New workspaces prompt for a name.
 
-**Cheat sheet:** `csherdr` → `cheat/cs-herdr.png`
+**Cheat sheet:** `cshrd` → `cheat/cs-herdr.png`
 
 ---
